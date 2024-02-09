@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
 
+import LoginForm from './components/Auth/LoginForm/LoginForm'
+import Main from './components/index'
+import { useAuth } from './components/Auth/AuthContext';
+import SignUpForm from './components/Auth/SignUpForm';
 function App() {
+   const { isLoggedIn,pref,setPref } = useAuth();
+
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <>
+    {pref === false ? (
+      <SignUpForm />
+    ) : (
+      <>
+        {!isLoggedIn && <LoginForm />}
+        {isLoggedIn && <Main />}
+      </>
+    )}
+  </>
+  )
 }
 
-export default App;
+export default App
