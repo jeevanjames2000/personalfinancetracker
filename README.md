@@ -76,7 +76,7 @@ You may also see any lint errors in the console.
 Implemented Context for state management inside pages mainly used for Authentication purpose
 initiated Static login as of now use this credentials to login
 
-# `email`:'jeevan', `password`:'1234'
+# `email`:'jeevan@gmail.com', `password`:'1234'
 
 Sign Up form is created but not integrated the logic to dynamically signup and sign in
 
@@ -96,4 +96,5 @@ src/
 | |-- store.js //store contains the Redux store file where you configure your Redux store.
 |-- App.js //Top level components rendered
 |-- index.js
+
 # personalfinancetracker
